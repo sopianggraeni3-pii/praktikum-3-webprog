@@ -108,20 +108,7 @@ $progress_percent = ($total_tugas > 0) ? round(($tugas_selesai / $total_tugas) *
         .dashboard-header { max-width: 1000px; margin: 40px auto 45px; text-align: center; }
         .dashboard-title { font-weight: 800; font-size: 1.8rem; color: var(--text-main); margin: 0; letter-spacing: -0.5px; }
         
-        /* Summary Cards */
-        .summary-wrapper { max-width: 1000px; margin: 0 auto 15px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
-        .summary-card { background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); padding: 20px; border-radius: 12px; border: 1px solid var(--border); display: flex; align-items: center; gap: 15px; box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.03); transition: transform 0.2s; }
-        .summary-card:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.06); }
-        .summary-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; }
         
-        .icon-blue { background: var(--primary-light); color: var(--primary); }
-        .icon-yellow { background: var(--warning-light); color: var(--warning); }
-        .icon-green { background: var(--success-light); color: var(--success); }
-        .icon-red { background: var(--danger-light); color: var(--danger); }
-
-        .summary-info h3 { margin: 0; font-size: 2rem; font-weight: 800; line-height: 1.1; }
-        .summary-info h6 { margin: 4px 0 0 0; font-size: 0.8rem; color: var(--gray); font-weight: 600; text-transform: uppercase; }
-
         /* Progress Bar Section */
         .progress-wrapper { max-width: 1000px; margin: 0 auto 30px; background: white; padding: 15px 20px; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
         .progress-header { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.85rem; font-weight: 600; color: var(--text-main); }
@@ -196,21 +183,7 @@ $progress_percent = ($total_tugas > 0) ? round(($tugas_selesai / $total_tugas) *
         <p class="dashboard-subtitle">Stay on track. Stay in sync.</p>
            </div>
 
-    <div class="summary-wrapper">
-        <div class="summary-card">
-            <div class="summary-icon icon-blue"><i class="fas fa-layer-group"></i></div>
-            <div class="summary-info"><h3><?= $total_tugas; ?></h3><h6>Total Tugas</h6></div>
-        </div>
-        <div class="summary-card">
-            <div class="summary-icon icon-yellow"><i class="fas fa-hourglass-half"></i></div>
-            <div class="summary-info"><h3><?= $tugas_pending; ?></h3><h6>Sedang Berjalan</h6></div>
-        </div>
-        <div class="summary-card">
-            <div class="summary-icon icon-red"><i class="fas fa-exclamation-triangle"></i></div>
-            <div class="summary-info"><h3><?= $tugas_terlambat; ?></h3><h6>Terlambat</h6></div>
-        </div>
-    </div>
-
+   
     <div class="progress-wrapper">
         <div class="progress-header">
             <span>Progress Penyelesaian</span>

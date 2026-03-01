@@ -1,7 +1,7 @@
 <?php
 
 $host = 'localhost';
-$dbname = 'akademik'; // Nama database sudah disesuaikan
+$dbname = 'akademik'; 
 $username = 'root';
 $password = '';
 
